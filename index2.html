@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    var operation = prompt("Виберіть операцію (+ , - , * , /):");
+    var num1 = parseFloat(prompt("Введіть перше число:"));
+    var num2 = parseFloat(prompt("Введіть друге число:"));
+    var result;
+    switch (operation) {
+        case "+":
+            result = num1 + num2;
+            break;
+        case "-":
+            result = num1 - num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "/":
+            if (num2 !== 0) {
+                result = num1 / num2;
+            } else {
+                alert("Ділення на нуль неможливе.");
+            }
+            break;
+        default:
+            alert("Неправильна операція. Будь ласка, виберіть add, sub, mult або div.");
+    }
+
+    if (result !== undefined) {
+        alert(num1 + " " + operation + " " + num2 + " = " + result);
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>
